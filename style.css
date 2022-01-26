@@ -1,0 +1,110 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+:root {
+  --Dark-cyan: hsl(185, 75%, 39%);
+  --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+  --Dark-grayish-blue: hsl(227, 10%, 46%);
+  --Dark-gray: hsl(0, 0%, 59%);
+  --White: #ffffff;
+}
+
+/* Typhography */
+
+/* Layout */
+.content {
+  background-color: var(--Dark-cyan);
+  font-family: "Kumbh Sans", sans-serif;
+  font-weight: 400;
+  color: var(--Very-dark-desaturated-blue);
+  display: flex;
+  align-items: center;
+  min-height: 100vh; /* content zawsze bedzie zawieral 100% wysokosci*/
+}
+
+.top-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 1.5rem;
+}
+
+.card_background{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("./images/bg-pattern-card.svg"); /*SVG jako background*/
+    width: 100%;
+    height: 150px;
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+}
+
+.imgYoung{
+    border-radius: 100%;
+    border: solid 3px white;
+    width: 100px;
+    margin-top: 90px; /* przesuniecie zdjecia*/
+}
+
+.top-container_description{
+    margin-top: 4rem;
+}
+
+.text-weight {
+  font-size: 18px;
+  color: var(--Very-dark-desaturated-blue);
+  font-weight: 700;
+}
+
+/*.bottom-container {
+  margin-left: 3em; /* margin odsuwa kontener dlatego sie zmniejszal
+  margin-right: 0;
+}*/
+
+.text-leight {
+  color: var(--Dark-grayish-blue);
+  font-weight: 400;
+  font-size: 12px;
+  text-align: center;
+}
+
+@media (min-width: 675px) {
+  .content {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+li {
+  align-self: center;
+  margin: 2em auto;
+}
+.card {
+  width: 375px;
+  background: var(--White);
+  border-radius: 5%;
+}
